@@ -26,6 +26,12 @@ config :rumbl, Rumbl.Repo,
   url: System.get_env("DATABASE_URL"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
   ssl: true
+
+config :rumbl, :wolfram,
+  app_id: System.get_env("WOLFRAM_APP_ID")
+
+
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
